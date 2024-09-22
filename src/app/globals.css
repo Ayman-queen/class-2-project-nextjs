@@ -1,0 +1,44 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+
+@keyframes pulse {
+  0% {
+    background-color: #f3f4f6; /* Tailwind gray-100 */
+  }
+  50% {
+    background-color: #e5e7eb; /* Tailwind gray-200 */
+  }
+  100% {
+    background-color: #f3f4f6; /* Tailwind gray-100 */
+  }
+}
+
+.bg-pulse {
+  animation: pulse 5s infinite;
+}
+
+.imageHoverEffect {
+  transition: transform 0.3s;
+}
+
+.imageHoverEffect:hover {
+  transform: scale(1.05);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ec4899, #f472b6); /* Gradient colors */
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* Vendor prefix for WebKit */
+  -webkit-text-fill-color: transparent; /* WebKit property for text color */
+  animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(236, 72, 153, 0.5), 0 0 10px rgba(236, 72, 153, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(236, 72, 153, 1), 0 0 30px rgba(236, 72, 153, 1);
+  }
+}
